@@ -8,3 +8,7 @@ body {
   background-color: mediumseagreen;
   color: white;
 }
+
+.cnotainer {
+  padding: 20px;
+}
