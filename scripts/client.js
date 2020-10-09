@@ -1,3 +1,7 @@
 console.log('It Works!');
 
-$(document).ready();
+$(document).ready(onReady);
+
+function onReady() {
+  console.log('stuff');
+}
