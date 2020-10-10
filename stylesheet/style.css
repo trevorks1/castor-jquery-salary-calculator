@@ -25,3 +25,7 @@ body {
 .employeeTable {
   border-collapse: collapse;
 }
+
+.isSelected > * {
+  background-color: rgba(236, 8, 8, 0.11);
+}

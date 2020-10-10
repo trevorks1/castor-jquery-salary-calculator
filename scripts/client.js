@@ -8,9 +8,10 @@ $(document).ready(onReady);
 
 // click event for submits
 function onReady() {
-  console.log('stuff');
+  console.log('onReady is ready');
 
   $('.js-click-submit').on('click', clickToSubmit);
+  $('.js-employee-list').on('click', '.js-btn-selector', selectEmployee);
 }
 
 // selectors with object for sending employee info
@@ -32,6 +33,14 @@ function clickToSubmit() {
   render();
 }
 
+function selectEmployee() {
+  console.log(selectEmployee);
+  $(this)
+    .parent() // td
+    .parent() // tr
+    .addClass('isSelected');
+}
+
 // employee table scaffolding, and a template literal
 function render() {
   $('.js-employee-list').empty();
@@ -46,8 +55,8 @@ function render() {
         <td>${item.idNum}</td>
         <td>${item.jobTitle}</td>
         <td>${item.salary}</td>
-        <td><button>Submit</button></td>
-        </tr>`
+        <td><button class="js-btn-selector">Submit</button></td>
+       </tr>`
     );
   }
 }
