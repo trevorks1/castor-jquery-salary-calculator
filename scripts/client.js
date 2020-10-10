@@ -35,14 +35,25 @@ function render() {
     const item = employeeList[i];
 
     $('.js-employee-list').append(
-      '<li>' +
+      '<tr>' +
+        '<td>' +
         item.firstName +
-        ', ' +
+        '</td>' +
+        '<td>' +
         item.lastName +
-        ', ' +
-        'idNum: ' +
+        '</td>' +
+        '<td>' +
         item.idNum +
-        '</li>'
+        '</td>' +
+        '<td>' +
+        item.jobTitle +
+        '</td>' +
+        '<td>' +
+        item.salary +
+        '</td>' +
+        '<td>' +
+        '</td>' +
+        '</tr>'
     );
   }
 }

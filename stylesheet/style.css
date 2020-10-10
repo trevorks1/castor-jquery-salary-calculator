@@ -16,3 +16,12 @@ body {
 .btn {
   margin: 10px 0;
 }
+
+.employeeTable td {
+  padding: 6px 10px;
+  border: 1px solid black;
+}
+
+.employeeTable {
+  border-collapse: collapse;
+}
