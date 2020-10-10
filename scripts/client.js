@@ -25,4 +25,24 @@ function clickToSubmit() {
     salary,
   };
   employeeList.push(employee);
+  render();
+}
+
+function render() {
+  $('.js-employee-list').empty();
+  for (let i = 0; i < employeeList.length; i++) {
+    console.log('render', employeeList[i]);
+    const item = employeeList[i];
+
+    $('.js-employee-list').append(
+      '<li>' +
+        item.firstName +
+        ', ' +
+        item.lastName +
+        ', ' +
+        'idNum: ' +
+        item.idNum +
+        '</li>'
+    );
+  }
 }
