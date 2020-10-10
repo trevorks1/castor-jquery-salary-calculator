@@ -1,15 +1,19 @@
 console.log('It Works!');
 
+// Global var for employee info
 const employeeList = [];
 
+// jQuery call to onReady function
 $(document).ready(onReady);
 
+// click event for submits
 function onReady() {
   console.log('stuff');
 
   $('.js-click-submit').on('click', clickToSubmit);
 }
 
+// selectors with object for sending employee info
 function clickToSubmit() {
   const firstName = $('.js-field-firstName').val();
   const lastName = $('.js-field-lastName').val();
@@ -28,6 +32,7 @@ function clickToSubmit() {
   render();
 }
 
+// employee table scaffolding
 function render() {
   $('.js-employee-list').empty();
   for (let i = 0; i < employeeList.length; i++) {
@@ -51,8 +56,7 @@ function render() {
         '<td>' +
         item.salary +
         '</td>' +
-        '<td>' +
-        '</td>' +
+        '<td><button>Submit</button></td>' +
         '</tr>'
     );
   }
