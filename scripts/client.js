@@ -32,7 +32,7 @@ function clickToSubmit() {
   render();
 }
 
-// employee table scaffolding
+// employee table scaffolding, and a template literal
 function render() {
   $('.js-employee-list').empty();
   for (let i = 0; i < employeeList.length; i++) {
@@ -40,24 +40,14 @@ function render() {
     const item = employeeList[i];
 
     $('.js-employee-list').append(
-      '<tr>' +
-        '<td>' +
-        item.firstName +
-        '</td>' +
-        '<td>' +
-        item.lastName +
-        '</td>' +
-        '<td>' +
-        item.idNum +
-        '</td>' +
-        '<td>' +
-        item.jobTitle +
-        '</td>' +
-        '<td>' +
-        item.salary +
-        '</td>' +
-        '<td><button>Submit</button></td>' +
-        '</tr>'
+      `<tr>
+        <td>${item.firstName}</td>
+        <td>${item.lastName}</td>
+        <td>${item.idNum}</td>
+        <td>${item.jobTitle}</td>
+        <td>${item.salary}</td>
+        <td><button>Submit</button></td>
+        </tr>`
     );
   }
 }
