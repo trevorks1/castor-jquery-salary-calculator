@@ -16,6 +16,8 @@ Along with their monthly income.
 
 ### To see the fully functional site please visit:
 
+file:///Users/trevorsansalone/prime/prework/jquery-salary-calculator-master/index.html
+
 Your project description goes here. What problem did you solve? How did you solve it?
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
