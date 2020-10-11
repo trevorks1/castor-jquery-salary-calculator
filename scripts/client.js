@@ -48,13 +48,11 @@ function addEmployee() {
 function deleteEmployee() {
   const index = $(this).data('index');
   // employeeList[index].isDeleted = true;
-
-  $(this)
-    .parent() // td
-    .parent() // tr
-    .remove(); // ('isDeleted');
-
-  totalMonthly();
+  if (index > -1) {
+    totalSalary -= Number(employeeList[index].salary);
+    employeeList.splice(index, 1);
+  }
+  displayEmployee();
 }
 
 // employee table scaffolding, and a template literal
@@ -77,50 +75,19 @@ function displayEmployee() {
       </tr>`
       );
   }
+  totalMonthly();
 }
 
 function totalMonthly() {
   // let monthlyTotal = 0;
   monthlyTotal = parseInt(totalSalary) / 12;
 
-  $('.js-total-monthly').text(monthlyTotal);
+  let currency = monthlyTotal.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+
+  $('.js-total-monthly').text(currency);
   if (monthlyTotal > 20000)
     $('.js-total-monthly').css('background-color', 'red');
   else {
     $('.js-total-monthly').css('background-color', 'white');
   }
 }
-
-// notes for some code logic
-/*
-function deleteEmployee() {
-  const index = $(this).data('index');
-  displayEmployee(index).isDeleted = true;
-
-  $(this).parent().parent().empty();
-  console.log('working?');
-
-  adjustSalary();
-}
-*/
-/*
-function adjustSalary() {
-  let monthlySalary = 0;
-  for (let i = 0; i < employeeList.length; i++) {
-    const item = employeeList[i];
-  }
-  if (item.isDeleted === false) {
-    monthlySalary += parseInt(item.annualSalary / 12);
-  }
-  console.log(monthlySalary);
-  $('.js-total-salary').text(monthlySalary);
-  if (monthlySalary > 20000)
-    $('.js-total-salary').css('background-color', 'red');
-  else if (monthlySalary < 20000)
-    $('.js-total-salary').css('background-color', 'white');
-}
-*/
-/*
-const item = employeeList[i];
-totalSalary += parseInt(item.annualSalary / 12);
-*/
