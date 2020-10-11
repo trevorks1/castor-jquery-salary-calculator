@@ -2,6 +2,8 @@ console.log('It Works!');
 
 // Global var for employee info
 const employeeList = [];
+let totalSalary = 0;
+let monthlyTotal = 0;
 
 // jQuery call to onReady function
 $(document).ready(onReady);
@@ -28,7 +30,7 @@ function addEmployee() {
     idNum,
     jobTitle,
     salary,
-    isDeleted: false,
+    // isDeleted: false,
   };
   employeeList.push(employee);
   displayEmployee();
@@ -37,22 +39,28 @@ function addEmployee() {
   $('.js-field-idNum').val('');
   $('.js-field-jobTitle').val('');
   $('.js-field-salary').val('');
+
+  totalSalary += parseInt(salary);
+
+  totalMonthly();
 }
 
 function deleteEmployee() {
   const index = $(this).data('index');
-  employeeList[index].isDeleted = true;
+  // employeeList[index].isDeleted = true;
 
   $(this)
     .parent() // td
     .parent() // tr
-    .empty('isDeleted');
+    .remove(); // ('isDeleted');
+
+  totalMonthly();
 }
 
 // employee table scaffolding, and a template literal
 function displayEmployee() {
   $('.js-employee-list').empty();
-  let monthTotal = 0;
+  // let totalSalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
 
@@ -71,15 +79,19 @@ function displayEmployee() {
   }
 }
 
-function totalSalaryCost() {
-  let totalSalary = 0;
-  for (let i = 0; i < employeeList.length; i++) {
-    const item = employeeList[i];
-    totalSalary += parseInt(item.annualSalary / 12);
+function totalMonthly() {
+  // let monthlyTotal = 0;
+  monthlyTotal = parseInt(totalSalary) / 12;
+
+  $('.js-total-monthly').text(monthlyTotal);
+  if (monthlyTotal > 20000)
+    $('.js-total-monthly').css('background-color', 'red');
+  else {
+    $('.js-total-monthly').css('background-color', 'white');
   }
-  let monthlySalary = totalSalary.toFixed();
-  $('.js-total-salary').text(monthlySalary);
 }
+
+// notes for some code logic
 /*
 function deleteEmployee() {
   const index = $(this).data('index');
@@ -107,4 +119,8 @@ function adjustSalary() {
   else if (monthlySalary < 20000)
     $('.js-total-salary').css('background-color', 'white');
 }
+*/
+/*
+const item = employeeList[i];
+totalSalary += parseInt(item.annualSalary / 12);
 */
