@@ -14,6 +14,8 @@ Then we add employee annual salary together dividing by 12 to then access the va
 To wrap things up, we gave the ability to delete each employee.
 Along with their monthly income.
 
+### To see the fully functional site please visit:
+
 Your project description goes here. What problem did you solve? How did you solve it?
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
