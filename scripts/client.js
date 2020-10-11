@@ -16,14 +16,13 @@ function addEmployee() {
   const idNum = $('.js-field-idNum').val();
   const jobTitle = $('.js-field-jobTitle').val();
   const salary = $('.js-field-salary').val();
-
+  // object constructor for inputs
   const employee = {
     firstName,
     lastName,
     idNum,
     jobTitle,
     salary,
-    // isDeleted: false,
   };
   employeeList.push(employee);
   displayEmployee();
@@ -40,7 +39,6 @@ function addEmployee() {
 // delete employee while also splicing out the totalSalary
 function deleteEmployee() {
   const index = $(this).data('index');
-  // employeeList[index].isDeleted = true;
   if (index > -1) {
     totalSalary -= Number(employeeList[index].salary);
     employeeList.splice(index, 1);
@@ -50,7 +48,6 @@ function deleteEmployee() {
 // employee table scaffolding, and a template literal
 function displayEmployee() {
   $('.js-employee-list').empty();
-  // let totalSalary = 0;
   for (let i = 0; i < employeeList.length; i++) {
     const item = employeeList[i];
 
