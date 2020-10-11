@@ -1,7 +1,5 @@
 # Jquery-Salary-Calculator
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
 ## Description
 
 Duration: 2 Week Sprint
@@ -37,6 +35,10 @@ This is an order of operation for my list.
 - HTML
 - CSS
 
-Your project description goes here. What problem did you solve? How did you solve it?
+## Acknowledgements
+
+- Prime Digital Academy; who has equipped and helped me to make this app a reality.
+- Special Shout-outs! Scott Bromander, Myron Schippers, and Rachael Bromander.
+- Also I would like to thank my peers.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
