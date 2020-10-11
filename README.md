@@ -18,6 +18,25 @@ Along with their monthly income.
 
 file:///Users/trevorsansalone/prime/prework/jquery-salary-calculator-master/index.html
 
+### Usage
+
+This is an order of operation for my list.
+
+1. Enter employee Details here; First Name, Last Name, IdNumber, Job title, Salary.
+2. Click the submit button.
+3. The employee Data should now be on the list below.
+4. Following with a delete button for each employee.
+5. As each employee's data is input you get the value of their monthly wages.
+6. Then you can delete those employees by clicking the Delete button.
+
+### Built With
+
+- Javascript
+- JQuery
+- WireFramework
+- HTML
+- CSS
+
 Your project description goes here. What problem did you solve? How did you solve it?
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
