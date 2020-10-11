@@ -1,21 +1,14 @@
-console.log('It Works!');
-
 // Global var for employee info
 const employeeList = [];
 let totalSalary = 0;
 let monthlyTotal = 0;
-
 // jQuery call to onReady function
 $(document).ready(onReady);
-
 // click event for submits
 function onReady() {
-  console.log('onReady is ready');
-
   $('.js-click-submit').on('click', addEmployee);
   $('.js-employee-list').on('click', '.js-btn-delete', deleteEmployee);
 }
-
 // selectors with object for sending employee info
 function addEmployee() {
   const firstName = $('.js-field-firstName').val();
@@ -44,7 +37,7 @@ function addEmployee() {
 
   totalMonthly();
 }
-
+// delete employee while also splicing out the totalSalary
 function deleteEmployee() {
   const index = $(this).data('index');
   // employeeList[index].isDeleted = true;
@@ -54,7 +47,6 @@ function deleteEmployee() {
   }
   displayEmployee();
 }
-
 // employee table scaffolding, and a template literal
 function displayEmployee() {
   $('.js-employee-list').empty();
@@ -77,9 +69,8 @@ function displayEmployee() {
   }
   totalMonthly();
 }
-
+// calculating the totalMonthly from annualSalary
 function totalMonthly() {
-  // let monthlyTotal = 0;
   monthlyTotal = parseInt(totalSalary) / 12;
 
   let currency = monthlyTotal.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,');

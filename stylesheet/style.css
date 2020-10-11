@@ -1,17 +1,29 @@
 html,
 body {
   margin: 0;
+  background: url('https://cff2.earth.com/uploads/2018/10/31175809/Increased-CO2-levels-are-causing-the-ocean-floor-to-dissolve-730x410.jpg');
 }
 
 .appBar {
   padding: 25px;
+  margin: 15px;
   background-color: mediumseagreen;
-  color: white;
+  color: rgb(5, 210, 218);
+  font-size: 36px;
+  box-shadow: aliceblue;
+  text-shadow: 2px 2px black;
   text-align: center;
+  border: solid black;
+  background: url('https://lh3.googleusercontent.com/proxy/jkMj4KqCYBkjZTb4k6j53FC7XMxwCqx04IgnA2kx0b6YpVLdG-jMNXt5YsmxBgAi5k8B4XYvrHROX9kQS7K_');
 }
 
 .container {
   padding: 20px;
+  margin: 15px auto;
+  border: solid;
+  width: 600px;
+  max-width: 100%;
+  background: url('https://papers.co/wallpaper/papers.co-vo19-samsung-galaxy-7-edge-green-abstract-pattern-23-wallpaper.jpg');
 }
 
 .btn {
@@ -21,12 +33,19 @@ body {
 .employeeTable td {
   padding: 6px 10px;
   border: 1px solid black;
+  font-weight: bold;
+  background: rgb(3, 175, 206);
 }
 
 .employeeTable {
   border-collapse: collapse;
+  border: solid;
 }
 
 .isSelected > * {
   background-color: rgba(236, 8, 8, 0.11);
+}
+
+.foot {
+  border: solid;
 }
